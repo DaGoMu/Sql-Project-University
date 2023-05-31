@@ -6,15 +6,15 @@ Build a SQL database for a university that manages students, courses, professors
 ## Project Technical Requirements
 
 The project needs to contain the following technical features:
-    • Build a database with the following tables: Students, Courses, Professors, Grades
-    • Foreign key relationships between the tables
-    • Create a script that populates all of the database tables with sample data
-    • SQL query scripts for:
-        ◦ The average grade that is given by each professor
-        ◦ The top grades for each student
-        ◦ Sort students by the courses that they are enrolled in
-        ◦ Create a summary report of courses and their average grades, sorted by the most challenging course (course with the lowest average grade) to the easiest course
-        ----------------------
+    * Build a database with the following tables: Students, Courses, Professors, Grades
+    * Foreign key relationships between the tables
+    * Create a script that populates all of the database tables with sample data
+    * SQL query scripts for:
+        * The average grade that is given by each professor
+        * The top grades for each student
+        * Sort students by the courses that they are enrolled in
+        * Create a summary report of courses and their average grades, sorted by the most challenging course (course with the lowest average grade) to the easiest course
+     
 
 
 # INSTRUCTIONS
@@ -23,15 +23,18 @@ The project needs to contain the following technical features:
 2. Use the Populating.sql to populate de database.
 3. Use the queries in the Queries.
 
+
+# BUGS!
+"The top grades for each student" Query Missing!
+
 # TABLES
 
-
-courses
+COURSES:
     courses_id
     courses_name
 
 
-students
+STUDENTS:
     students_id 
     students_first_name
     students_last_name
@@ -40,7 +43,7 @@ students
     students_unique_id
     
 
-proffessors
+PROFFESSORS:
     proffessors_id
     proffessors_first_name
     proffessors_last_name
@@ -48,11 +51,11 @@ proffessors
     proffessors_courses_id
 
 
-grades
+GRADES:
     grades_id
     grades_value
     grades_courses_id
     grades_students_id
 
--------
+
 

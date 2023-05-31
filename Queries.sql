@@ -15,7 +15,7 @@ ON courses_id = grades_courses_id
 GROUP BY proffessors_id;
 
 
--- Top Grades for Each Student
+-- TO FIX!!!! Top Grades for Each Student 
 
 USE university;
 
@@ -28,31 +28,20 @@ JOIN grades g
 on g.grades_students_id = s.students_id
 GROUP BY students_id;
 
+
 -- Sort Students by Course
 USE university;
 
 SELECT 
+courses_name,
 students_first_name,
-students_last_name,
-courses_name
+students_last_name
 FROM students
 JOIN courses
 on students_courses_id = courses_id
 ORDER BY courses_id ASC;
 
 
--- Summary Report of Average Grades
-
-use university;
-
-SELECT 
-courses_name,
-AVG(grades_value)
-from grades
-join courses
-on courses_id = grades_courses_id
-group by courses_id
-order by AVG(grades_value) ASC
 
 -- Summary Report of Average Grades
 
