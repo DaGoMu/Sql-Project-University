@@ -21,13 +21,13 @@ The project needs to contain the following technical features:
 
 1.  Use the content of Tables.sql to create the Schema and tables.
 2. Use the Populating.sql to populate de database.
-3. Use the queries in the Queries.
+3. Use the queries in the Queries.sql file.
 
 
-# BUGS!
-"The top grades for each student" Query Missing!
+
 
 # TABLES
+
 
 COURSES:
     courses_id

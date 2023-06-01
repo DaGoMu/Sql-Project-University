@@ -15,21 +15,20 @@ ON courses_id = grades_courses_id
 GROUP BY proffessors_id;
 
 
--- TO FIX!!!! Top Grades for Each Student 
+-- Top Grades for Each Student 
 
 USE university;
 
-SELECT 
-s.students_first_name,
-s.students_last_name,
-MAX(g.grades_value)
-FROM students s
-JOIN grades g
-on g.grades_students_id = s.students_id
-GROUP BY students_id;
+SELECT MAX(grades_value)
+From grades
+join students
+on grades_students_id = students_id
+where students_unique_id = 2
+-- where students_first_name = "Rob"
 
 
 -- Sort Students by Course
+
 USE university;
 
 SELECT 
@@ -42,8 +41,24 @@ on students_courses_id = courses_id
 ORDER BY courses_id ASC;
 
 
-
 -- Summary Report of Average Grades
+
+USE university;
+
+SELECT 
+courses_name AS "Course",
+AVG(grades_value) AS "Avg Grade"
+FROM grades
+JOIN courses
+ON courses_id = grades_courses_id
+GROUP BY courses_id
+ORDER BY avg(grades_value) ASC;
+
+
+
+-- OTHER QUERIES
+
+    -- Classes in common with proffessors
 
 use university;
 
